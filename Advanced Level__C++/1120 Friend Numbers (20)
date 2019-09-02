@@ -15,6 +15,15 @@ Sample Output:
 4
 3 6 9 26
 
+/* unknown words :
+     none
+*/
+
+/*  
+    用set或者标记数组都行，标记数组的大小最大也才9*4=36
+    如果不会set的建议还是去看看STL吧，这个挺实用的
+*/
+
 #include<cstdio>
 #include<set>
 using namespace std;
