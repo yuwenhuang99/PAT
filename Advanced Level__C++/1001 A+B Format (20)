@@ -12,6 +12,10 @@ Sample Input:
 Sample Output:
 -999,991
 
+/* unknown words :
+     commas: 逗号
+*/
+
 /*
 可以利用to_string简化 不必在通过取余然后存入数组的方式
 关键是什么时候添逗号，很明显在(len-1-i)为3的倍数 也就是剩余的数是3的倍数，当然不能是剩余的不能是0
