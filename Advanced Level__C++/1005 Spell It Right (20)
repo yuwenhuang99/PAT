@@ -14,6 +14,11 @@ Sample Input:
 Sample Output:
 one five
 
+/* unknown words :
+     occupy: 占据
+     consecutive: 连续的
+*/
+
 
 /*
     没必要数组保存，直接getchar
