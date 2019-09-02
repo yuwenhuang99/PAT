@@ -1,0 +1,44 @@
+1008 Elevator (20)
+
+The highest building in our city has only one elevator. A request list is made up with N positive numbers. The numbers denote at which floors the elevator will stop, in specified order. It costs 6 seconds to move the elevator up one floor, and 4 seconds to move down one floor. The elevator will stay for 5 seconds at each stop.
+For a given request list, you are to compute the total time spent to fulfill the requests on the list. The elevator is on the 0th floor at the beginning and does not have to return to the ground floor when the requests are fulfilled.
+
+Input
+Each input file contains one test case. Each case contains a positive integer N, followed by N positive numbers. All the numbers in the input are less than 100.
+
+Output
+For each test case, print the total time on a single line.
+
+Sample Input:
+3 2 3 1
+
+Sample Output:
+41
+
+/* unknown words :
+     denote: 表示
+     specified: 特定的
+     fulfill: 完成，履行，满足
+*/
+
+/*
+   按题意做就好了，暴力模拟
+*/
+#include<cstdio>
+using namespace std;
+int main()
+{
+    int n,pre = 0,now = 0;
+    scanf("%d",&n);
+    int sum = n*5;
+    while(n--)
+    {
+        scanf("%d",&now);
+        if(now>pre) sum += 6*(now-pre);
+        else sum += 4*(pre-now);
+        pre = now;
+    }
+    printf("%d\n",sum);
+    return 0;
+}
+
