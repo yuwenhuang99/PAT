@@ -1,0 +1,42 @@
+1005 Spell It Right (20)
+
+Given a non-negative integer N, your task is to compute the sum of all the digits of N, and output every digit of the sum in English.
+
+Input
+Each input file contains one test case. Each case occupies one line which contains an N (≤10^100)
+
+Output
+For each test case, output in one line the digits of the sum in English words. There must be one space between two consecutive words, but no extra space at the end of a line.
+
+Sample Input:
+12345
+
+Sample Output:
+one five
+
+
+/*
+    没必要数组保存，直接getchar
+    然后转化成英文就好了
+*/
+#include<cstdio>
+#include<string>
+using namespace std;
+int main()
+{
+    int c;
+    int sum = 0;
+    char EngNum[10][10] = {"zero","one","two","three","four","five","six","seven","eight","nine"};
+    while((c=getchar())!='\n')
+        sum += c-'0';
+    string str = to_string(sum);
+    int len = str.length();
+    for(int i = 0; i<len; ++i)
+    {
+        if(i!=0)
+            printf(" ");
+        printf("%s",EngNum[str[i]-'0']);
+    }
+    printf("\n");
+    return 0;
+}
