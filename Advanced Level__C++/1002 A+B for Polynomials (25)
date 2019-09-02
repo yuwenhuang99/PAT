@@ -14,6 +14,13 @@ Sample Input
 Sample Output
 3 2 1.5 1 2.9 0 3.2
 
+/* unknown words :
+     polynomials: 多项式
+     terms: 项
+     exponents: 指数
+     coefficients: 系数
+*/
+
 /*
 注意当系数为0是总数要减一，而且不输出这一项就好了
 */
