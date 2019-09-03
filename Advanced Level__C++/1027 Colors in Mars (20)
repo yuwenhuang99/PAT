@@ -8,6 +8,16 @@ Each input file contains one test case which occupies a line containing the thre
 Output
 For each test case you should output the Mars RGB value in the following format: first output #, then followed by a 6-digit number where all the English characters must be upper-cased. If a single color is only 1-digit long, you must print a 0 to its left.
 
+Sample Input:
+15 43 71
+
+Sample Output:
+#123456
+
+/* unknown words :
+    radix: 基数
+*/
+
 /*
 想的太复杂了，字符串拼接一直错，要慎用string，有时候如果复杂的解决不了，但计算量又不大，为什么不跳出思维的胡同，直接采用最简单的方法呢
 */
