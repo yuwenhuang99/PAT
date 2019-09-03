@@ -33,3 +33,29 @@ int main()
     printf("#%c%c%c%c%c%c\n",num[a/13],num[a%13],num[b/13],num[b%13],num[c/13],num[c%13]);
     return 0;
 }
+
+/*
+ 发现不是两位数也有可能是三位数，那么b可能大于10，我服了
+ 对b也要做a一样的判断，而不是直接输出
+*/
+#include<cstdio>
+#include<string>
+using namespace std;
+int main()
+{
+    int n,a,b;
+    string str = "#";
+    for(int i = 0;i<3;++i)
+    {
+        scanf("%d",&n);
+        a = n%13;
+        b = n/13;
+        if(b>9) str += (b+'A'-10);
+        else str += (b+'0');
+        // str += (b+'0'); WA写法
+        if(a>9) str += (a+'A'-10);
+        else str += (a+'0');
+    }
+    printf("%s\n",str.c_str());
+    return 0;
+}
