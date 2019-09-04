@@ -1,0 +1,54 @@
+1041 Be Unique (20)
+
+Being unique is so important to people on Mars that even their lottery is designed in a unique way. The rule of winning is simple: one bets on a number chosen from [1,10^4]. 
+The first one who bets on a unique number wins. For example, if there are 7 people betting on { 5 31 5 88 67 88 17 }, then the second one who bets on 31 wins.
+
+Input:
+Each input file contains one test case. Each case contains a line which begins with a positive integer N (≤10^5) and then followed by N bets. The numbers are separated by a space.
+
+Output:
+For each test case, print the winning number in a line. If there is no winner, print None instead.
+
+Sample Input 1:
+7 5 31 5 88 67 88 17
+Sample Output 1:
+21
+
+Sample Input 1:
+5 888 666 666 888 888
+Sample Output 1:
+None
+
+/*
+    unknown words:
+    lottery: 抽奖
+*/
+
+/*
+    用一个数组存，在用一个数组判断就好了，水题
+*/
+#include<cstdio>
+using namespace std;
+int vis[100005] = {0};
+int num[100005] = {0};
+int main()
+{
+    int n,i;
+    scanf("%d",&n);
+    for(i = 0; i<n; ++i)
+    {
+        scanf("%d",(num+i));
+        vis[*(num+i)]++;
+    }
+    for(i = 0; i<n; ++i)
+        if(vis[*(num+i)]==1)
+            break;
+    if(i==n)
+        puts("None");
+    else
+        printf("%d\n",*(num+i));
+    return 0;
+}
+
+
+
