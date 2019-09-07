@@ -1,0 +1,41 @@
+1058 A+B in Hogwarts (20)
+
+If you are a fan of Harry Potter, you would know the world of magic has its own currency system -- as Hagrid explained it to Harry, "Seventeen silver Sickles to a Galleon and twenty-nine Knuts to a Sickle, it's easy enough."
+Your job is to write a program to compute A+B where A and B are given in the standard form of Galleon.Sickle.Knut (Galleon is an integer in [0,10^7], Sickle is an integer in [0, 17), and Knut is an integer in [0, 29)).
+
+Input 
+Each input file contains one test case which occupies a line with A and B in the standard form, separated by one space.
+
+Output 
+For each test case you should output the sum of A and B in one line, with the same format as the input.
+
+Sample Input:
+3.2.1 10.16.27
+
+Sample Output:
+14.1.28
+
+/*
+    unknown words:
+     silver: 银
+     Sickles: 镰刀
+     Galleon: 帆船
+*/
+
+/*
+    g不用取余，醉了，哪怕g>1e7都不要取余，搞得我wa一次
+    水题，进制的计算
+*/
+#include<cstdio>
+using namespace std;
+int main()
+{
+    int g,s,k;
+    int g1,s1,k1;
+    scanf("%d.%d.%d %d.%d.%d",&g,&s,&k,&g1,&s1,&k1);
+    k += k1;
+    s += s1+k/29;
+    g += g1+s/17;
+    printf("%d.%d.%d\n",g,s%17,k%29);
+    return 0;
+}
