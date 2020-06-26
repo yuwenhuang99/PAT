@@ -7,9 +7,8 @@ int main() {
     cin >> str;
     int sum = 0;
     int len = str.length();
-    for (int i = 0;i < len;++i) {
+    for (int i = 0;i < len;++i)
         sum += str[i] - '0';
-    }
     int n[1005], i = 0;
     while (sum != 0) {
         n[i++] = sum % 10;
